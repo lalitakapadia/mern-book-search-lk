@@ -109,5 +109,5 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 * `SignupForm.jsx`: Replace the `addUser()` functionality imported from the `API` file with the `ADD_USER` mutation functionality.
 
 * `LoginForm.jsx`: Replace the `loginUser()` functionality imported from the `API` file with the `LOGIN_USER` mutation functionality.
-![alt text](client/src/assets/images/SaveBook.png)
-![alt text](client/src/assets/images/HomePage.png)
+![alt text](client/src/assets/SaveBook.png)
+![alt text](client/src/assets/HomePage.png)
