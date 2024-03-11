@@ -11,6 +11,12 @@ Create an Apollo Provider so that requests can communicate with an Apollo Server
 ## Getting Started
 In order for this application to use a GraphQL API, you’ll need to refactor the API to use GraphQL on the back end and add some functionality to the front end. The following sections contain details about the files you’ll need to modify on the back end and the front end.
 
+ ## deployed on heroku  and github pages links:
+  
+https://mern-book-search-lk-a909b69fe7c5.herokuapp.com
+
+https://github.com/lalitakapadia/mern-book-search-lk.git
+
 ### Back-End Specifications
 You’ll need to complete the following tasks in each of these back-end files:
 
@@ -109,5 +115,7 @@ Additionally, you’ll need to complete the following tasks in each of these fro
 * `SignupForm.jsx`: Replace the `addUser()` functionality imported from the `API` file with the `ADD_USER` mutation functionality.
 
 * `LoginForm.jsx`: Replace the `loginUser()` functionality imported from the `API` file with the `LOGIN_USER` mutation functionality.
+
+
 ![alt text](client/src/assets/SaveBook.png)
 ![alt text](client/src/assets/HomePage.png)
