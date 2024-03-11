@@ -5,13 +5,12 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
-      //console.log('Log in ' + context);
       if (context.user.username) {
         const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
 
         return userData;
       }
-
+      console.log('Use is logged out or has not logged in');
       throw new AuthenticationError('Not logged in');
     },
   },

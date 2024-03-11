@@ -22,6 +22,8 @@ const SavedBooks = () => {
 
   const userData = data?.me || {};
 
+  console.log("User data in saved books: " + JSON.stringify(userData));
+
   const handleDeleteBook = async (bookId) => {
     console.log('Book to be deleted' + bookId);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -50,7 +52,7 @@ const SavedBooks = () => {
        </div>  
       <Container>
         <h2>
-          {userData.savedBooks.length
+          {userData.savedBooks
             ? `Viewing ${userData.savedBooks.length} saved ${
                 userData.savedBooks.length === 1 ? 'book' : 'books'
               }:`
