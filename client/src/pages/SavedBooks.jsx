@@ -22,6 +22,8 @@ const SavedBooks = () => {
 
   const userData = data?.me || {};
 
+  console.log("User data in saved books: " + JSON.stringify(userData));
+
   const handleDeleteBook = async (bookId) => {
     console.log('Book to be deleted' + bookId);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -50,14 +52,16 @@ const SavedBooks = () => {
        </div>  
       <Container>
         <h2>
-          {userData.savedBooks.length
+          {userData.savedBooks
             ? `Viewing ${userData.savedBooks.length} saved ${
                 userData.savedBooks.length === 1 ? 'book' : 'books'
               }:`
             : 'You have no saved books!'}
         </h2>
         <Row>
-            {userData.savedBooks.map((book) => {
+          {userData.savedBooks ? (
+            <>
+              {userData.savedBooks.map((book) => {
               return (
                 <Col xs={12} md={8} lg={4} key={book.bookId}>
                   <Card key={book.bookId} border="dark">
@@ -83,7 +87,10 @@ const SavedBooks = () => {
                 </Col>
               );
             })}
-          
+            </>
+          ) : (
+            <></>
+          )}
         </Row>
       </Container>
     </>
