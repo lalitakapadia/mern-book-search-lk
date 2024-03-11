@@ -59,7 +59,9 @@ const SavedBooks = () => {
             : 'You have no saved books!'}
         </h2>
         <Row>
-            {userData.savedBooks.map((book) => {
+          {userData.savedBooks ? (
+            <>
+              {userData.savedBooks.map((book) => {
               return (
                 <Col xs={12} md={8} lg={4} key={book.bookId}>
                   <Card key={book.bookId} border="dark">
@@ -85,7 +87,10 @@ const SavedBooks = () => {
                 </Col>
               );
             })}
-          
+            </>
+          ) : (
+            <></>
+          )}
         </Row>
       </Container>
     </>
